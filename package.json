@@ -1,0 +1,30 @@
+{
+  "name": "medavie_assesment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tray0019/Medavie_Assesment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tray0019/Medavie_Assesment/issues"
+  },
+  "homepage": "https://github.com/tray0019/Medavie_Assesment#readme",
+  "dependencies": {
+    "@wdio/cli": "^9.20.0",
+    "@wdio/cucumber-framework": "^9.20.0",
+    "@wdio/local-runner": "^9.20.0",
+    "@wdio/spec-reporter": "^9.20.0",
+    "chromedriver": "^142.0.1",
+    "wdio-chromedriver-service": "^8.1.1",
+    "webdriverio": "^9.20.0"
+  }
+}
