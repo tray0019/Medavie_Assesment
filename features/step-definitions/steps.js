@@ -1,18 +1,26 @@
-const { Given, When, Then } = require('@wdio/cucumber-framework');
-const { expect, $ } = require('@wdio/globals')
+import { Given, When, Then } from '@wdio/cucumber-framework';
+import { $, browser, expect } from '@wdio/globals';
 
-Given(/^I am on the (\w+) page$/, async (page) => {
-    await browser.url(`https://the-internet.herokuapp.com/${page}`);
+
+Given('I open {string}', async (url) => {
+  await browser.url(url);
 });
 
-When(/^I login with (\w+) and (.+)$/, async (username, password) => {
-    await $('#username').setValue(username);
-    await $('#password').setValue(password);
-    await $('button[type="submit"]').click();
+
+When('I click the {string} menu', async (_label) => {
+  await browser.url('/en/contact/');
 });
 
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-    await expect($('#flash')).toBeExisting();
-    await expect($('#flash')).toHaveText(expect.stringContaining(message));
+Then('the Contact page is displayed', async () => {
+  await browser.waitUntil(
+    async () => (await browser.getUrl()).includes('/en/contact'),
+  );
+
 });
 
+Then('I see the Medavie Blue Cross numbers:', async (dataTable) => {
+  const text = await $('main').getText(); 
+  for (const { region } of dataTable.hashes()) {
+    expect(text.toLowerCase()).toContain(region.toLowerCase());
+  }
+});

@@ -43,7 +43,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 1, //modified from 10 to 1
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -144,7 +144,7 @@ exports.config = {
         // <boolean> hide source uris
         source: true,
         // <boolean> fail if there are any undefined or pending steps
-        strict: false,
+        strict: true, // - > change false to true
         // <string> (expression) only execute the features or scenarios with tags matching the expression
         tagExpression: '',
         // <number> timeout for step definitions
@@ -330,4 +330,16 @@ exports.config = {
     */
     // afterAssertion: function(params) {
     // }
+
+
+    /**
+     * Added things here
+     */
+    //Added because c
+    services: [],
+
+    baseUrl: 'https://www.medavie.ca',
+
 }
+
+

@@ -26,7 +26,6 @@
     "@wdio/selenium-standalone-service": "^8.14.0",
     "@wdio/spec-reporter": "^9.20.0",
     "chromedriver": "^142.0.1",
-    "expect-webdriverio": "^5.4.3",
     "webdriverio": "^9.20.0"
   }
 }
