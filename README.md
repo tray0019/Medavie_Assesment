@@ -1,7 +1,11 @@
 
-Instruction to run the application. 
+Instruction on How to run the automation. 
 
-1. 
+User must have the following Tech Stacks.
+
+
+1. Clone the repository 
+2. 
 
 
 
@@ -28,6 +32,7 @@ Steps taken:
 4. Generate WDIO config
 - {npx wdio config}
 - answered prompt questions
+- wdio.conf.js added
 
 5. Update wdio.conf.js
 - added baseURL
@@ -35,10 +40,8 @@ Steps taken:
 6. Added contact.feature and added the English steps 
 - Used Gherkin language(readable plain english language)
 
-7. Coded the steps for Medavie contact steps
+7. Coded English version for Medavie contact steps
 - Opens URL -> Contact page -> Confirm the contact and Check Region
-
-8. 
 
 
 WebdriverIO - Node.js library that lets me control the browser
